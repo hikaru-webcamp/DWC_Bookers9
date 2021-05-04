@@ -24,6 +24,8 @@
   </nav>
 </header>
 
+<% unless current_page?(root_path) %> 
+<!--root_pathで検索窓を表示させない-->
 <div class="container">
     <div class="d-flex align-items-center justify-content-center">　<!--左右中央による記述-->
  　　<% if user_signed_in? %>
@@ -31,4 +33,5 @@
     <!-- 検索窓必須だが、ログインしている人にしか見えなくする -->
 　　<% end %>
 　　</_div>
+<% end %>
  </div>
