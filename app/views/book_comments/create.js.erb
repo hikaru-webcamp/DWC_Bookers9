@@ -1,3 +1,6 @@
 $("#comments<%= @book.id %>")
 .html
 ("<%= j(render partial: 'book_comments/comment', locals: {book: @book} )%>")
+
+$("textarea").val("")
+<!--テキストエリア文字を0リセット-->
